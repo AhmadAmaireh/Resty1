@@ -1,0 +1,7 @@
+$backgroundColor: rgb(247, 247, 247);
+section {
+  background: $backgroundColor;
+  margin: 50px;
+  border: 1px solid black;
+  overflow: scroll;
+}
