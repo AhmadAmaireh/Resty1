@@ -1,0 +1,34 @@
+$backgroundColor: #09efef;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $backgroundColor;
+  height: 100%;
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  footer {
+    background: darken($backgroundColor, 50);
+    border-top: 1px solid rgb(231, 17, 174);
+    padding: 1em 3em;
+    margin: 0;
+  }
+
+  header {
+    background: darken($backgroundColor, 75);
+    border-bottom: 1px solid rgb(84, 234, 15);
+    color: rgb(102, 248, 12);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
