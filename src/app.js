@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 import './app.scss';
 
@@ -9,41 +9,51 @@ import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
 
+function App() {
 
-function App(props) {
+    const [data,
+        setData] = useState({data: null, requestParams: {}})
 
-    const [state, setState] = useState (
-      {
-        data: null,
-        requestParams: {},
-      }
-    ) ;
- 
+    const [result,
+        setResult] = useState()
 
- const callApi = (requestParams) => {
-    // mock output
-    const data = {
-      count: 2,
-      results: [
-        {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-        {name: 'fake thing 2', url: 'http://fakethings.com/2'},
-      ],
-    };
-    setState({data, requestParams});
-  }
+    function callApi(requestParams) {
+        // mock output
+        const data = {
+            count: 2,
+            results: [
+                {
+                    name: 'fake thing 1',
+                    url: 'http://fakethings.com/1'
+                }, {
+                    name: 'fake thing 2',
+                    url: 'http://fakethings.com/2'
+                }
+            ]
+        };
+        setData({
+            ...data,
+            data,
+            requestParams
+        })
+    }
+    // console.log(result);
 
-  
     return (
-      <React.Fragment>
-        <Header />
-        <div>Request Method: {state.requestParams.method}</div>
-        <div>URL: {state.requestParams.url}</div>
-        <Form handleApiCall={callApi} />
-        <Results data={state.data} />
-        <Footer />
-      </React.Fragment>
+        <React.Fragment>
+            <Header/>
+            <Form handleApiCall={callApi} setResult={setResult}/>
+            <div id='body'>
+                <div id={result?'method':null}>
+                    <div>{data.requestParams.method}</div>
+                    <div>{data.requestParams.url}</div>
+                </div>
+                <Results result={result}/>
+            </div>
+            <Footer/>
+        </React.Fragment>
     );
-  
+
 }
 
 export default App;
