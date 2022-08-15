@@ -1,12 +1,12 @@
 import React from 'react';
+import './header.scss'
 
-function Header() {
-  
+function Header () {
     return (
-      <header>
+      <header data-testid='header'>
         <h1>RESTY</h1>
       </header>
     );
-  }
+}
 
 export default Header;

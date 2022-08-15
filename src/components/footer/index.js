@@ -1,9 +1,7 @@
 import React from 'react';
-
-function Footer() {
-  
-    return <footer>&copy; 2018</footer>;
-  }
-
+import './footer.scss'
+function Footer () {
+    return <footer>RESTY &copy; 2022</footer>;
+}
 
 export default Footer;
