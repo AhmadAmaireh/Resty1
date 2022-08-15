@@ -11,6 +11,8 @@ Students will be creating and styling a Counter application. Look for the follow
 - Button Handlers
   - Bonus if they can wire both buttons with one handler
 
+-----
+
 ### Grading Standards & Notes
 
 - Features
@@ -26,11 +28,13 @@ Students will be creating and styling a Counter application. Look for the follow
 - Documentation
   - Quality README
 
+----
+
 ### Lab Assistance Notes
 
 - The first and most important part of the lab assignment is to draw a process diagram of the starter code and state as events happen. Once the students understand that, they can move on.
 
-------
+-----
 
 ## UMI
 ![](./assets/UMI.jpg)
